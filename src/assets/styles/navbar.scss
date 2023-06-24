@@ -1,0 +1,11 @@
+.navbar {
+  @apply flex items-center justify-between py-[1.6rem];
+
+  & ul {
+    @apply flex gap-x-[4.0rem] items-center;
+
+    & li {
+      @apply text-[1.6rem] font-medium;
+    }
+  }
+}

@@ -1,8 +1,9 @@
 // Font Variables //
 // ---------------------------------------------------------------------//
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;600;700;800;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
-$font-primary: 'Fira Sans Condensed', sans-serif;
+//
+$font-primary: 'Raleway', sans-serif;
 
 body::-webkit-scrollbar {
   width: 0.5rem;
@@ -23,4 +24,5 @@ body::-webkit-scrollbar {
 html {
   box-sizing: border-box;
   font-size: 62.5%; //10px/16px = 62.5% 1rem
+  font-family: $font-primary;
 }
