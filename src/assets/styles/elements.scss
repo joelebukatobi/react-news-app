@@ -1,0 +1,114 @@
+button,
+button[type='button'] {
+  @apply h-[4rem] flex items-center justify-center gap-[.96rem] rounded-[.4rem] border-[.1rem] border-blue-600 bg-blue-600 px-[1.6rem] py-[1.6rem] text-white transition duration-300;
+  //
+  & span {
+    @apply text-[1.4rem] text-white;
+
+    &:hover {
+      @apply font-medium;
+    }
+  }
+  //
+  & svg {
+    @apply h-[1.6rem] w-[1.6rem] stroke-white stroke-2;
+  }
+  // Button Hover
+  &:hover {
+    @apply hover:bg-blue-700  border-blue-700 font-medium;
+  }
+  // Button Focus
+  &:focus {
+    @apply focus:outline-none;
+  }
+  // Button Active
+  &:active {
+    @apply focus:outline-none;
+  }
+}
+
+// Label
+label {
+  @apply block font-medium text-gray-900;
+}
+// Input
+input {
+  @apply w-full rounded-[.4rem] border-[.1rem] border-gray-200 px-[1.6rem] h-[4rem] transition duration-300;
+  // Input Hover
+  &:hover {
+    @apply border-blue-500 border-[.24rem];
+  }
+  // Input Focus
+  &:focus {
+    @apply focus:outline-none border-[.24rem];
+  }
+  // Input Active
+  &:active {
+    @apply focus:outline-none;
+  }
+}
+
+// Textarea
+textarea {
+  @apply w-full rounded-[.4rem] border-[.1rem] border-gray-200 p-[1.6rem] transition duration-300 h-[16rem];
+  // Input Hover
+  &:hover {
+    @apply border-blue-500 border-[.24rem];
+  }
+  // Input Focus
+  &:focus {
+    @apply focus:outline-none border-[.24rem];
+  }
+  // Input Active
+  &:active {
+    @apply focus:outline-none;
+  }
+}
+
+//Select
+select {
+  @apply w-full rounded-[.4rem] border-gray-200 border-[.1rem] h-[4rem] px-[1.6rem] bg-white text-gray-400;
+  // Select Hover
+  &:hover {
+    @apply border-blue-500 border-[.24rem];
+  }
+  // Select Focus
+  &:focus {
+    @apply focus:outline-none border-[.24rem];
+  }
+  // Select Active
+  &:active {
+    @apply focus:outline-none;
+  }
+}
+
+// Table
+table {
+  @apply min-w-full divide-y-[.1rem] divide-blue-100 bg-white;
+  & thead {
+    @apply ltr:text-left rtl:text-right;
+    & tr {
+      & th {
+        @apply text-left whitespace-nowrap px-[.4rem] py-[.8rem] font-semibold text-gray-900;
+      }
+    }
+  }
+  & tbody {
+    @apply divide-y-[.1rem] divide-blue-100;
+    & tr {
+      @apply odd:bg-gray-50 hover:bg-blue-50;
+      & td {
+        @apply whitespace-nowrap px-[.4rem] py-[.8rem]  text-gray-800;
+        & svg {
+          @apply h-[2.4rem] w-[2.4rem] p-[.2rem] fill-gray-800 hover:fill-blue-600 hover:cursor-pointer;
+        }
+      }
+    }
+  }
+}
+
+// Form
+form {
+  @apply space-y-[1.6rem];
+  //
+}

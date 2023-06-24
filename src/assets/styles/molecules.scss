@@ -1,0 +1,74 @@
+.card {
+  @apply rounded-xl p-[1.6rem] shadow-sm w-1/3 bg-white;
+  & a {
+    @apply relative flex items-start justify-between;
+  }
+
+  & div {
+    @apply pt-[1.6rem];
+
+    & svg {
+      @apply h-[3.2rem] w-[3.2rem] stroke-blue-600 stroke-[1.5];
+    }
+
+    & h5 {
+      @apply mt-4 font-bold text-gray-900;
+    }
+
+    & p {
+      @apply text-gray-800 mt-2 hidden sm:block;
+    }
+  }
+  & span {
+    @apply rounded-full bg-blue-50 px-[.8rem] py-[.4rem] text-[1.4rem] font-medium text-blue-600;
+  }
+}
+
+div[aria-label='input-group'] {
+  & label {
+    @apply mb-[.8rem];
+  }
+  //
+  & div {
+    @apply relative;
+    //
+    & input {
+      @apply w-full;
+      //
+    }
+    & span {
+      //
+      & button[type='button'],
+      & button {
+        @apply rounded-[.4rem] bg-[unset] hover:bg-transparent border-transparent p-0;
+        //
+        & svg {
+          @apply h-[2rem] w-[2rem] stroke-gray-200 hover:stroke-blue-600 stroke-2;
+        }
+      }
+      @apply absolute inset-y-0 end-[1.6rem] grid place-content-center;
+      // & svg {
+      //   @apply h-[2.4rem] w-[2.4rem] stroke-black stroke-2;
+      // }
+    }
+  }
+}
+
+div[aria-label='form-row'] {
+  @apply flex gap-x-[1.6rem] justify-between;
+  //
+  & div[aria-label='input-group'] {
+    @apply w-full;
+    & label {
+      @apply not-sr-only mb-[.8rem];
+    }
+  }
+}
+
+div[aria-label='button-row'] {
+  @apply flex space-x-[1.6rem];
+
+  & button:first-of-type {
+    @apply bg-red-500 border-red-500 hover:bg-red-600 hover:border-red-600;
+  }
+}

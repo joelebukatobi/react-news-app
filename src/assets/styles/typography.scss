@@ -1,0 +1,37 @@
+h1 {
+  @apply text-[6.7rem];
+}
+
+h2 {
+  @apply text-[5rem];
+}
+
+h3 {
+  @apply text-[3.7rem];
+}
+
+h4 {
+  @apply text-[2.8rem];
+}
+
+h5 {
+  @apply text-[2.1rem];
+}
+
+h6 {
+  @apply text-[1.8rem];
+}
+
+p,
+input,
+select,
+button,
+td,
+th,
+textarea {
+  @apply text-[1.6rem] font-normal;
+}
+
+label {
+  @apply text-[1.2rem];
+}

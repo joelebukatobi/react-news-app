@@ -1,3 +1,12 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+// Style Modules
+@import 'base';
+@import 'typography';
+@import 'elements';
+@import 'molecules';
+@import 'layout';
+@import 'index';
+@import 'login';

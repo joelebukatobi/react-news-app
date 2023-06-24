@@ -1,0 +1,26 @@
+// Font Variables //
+// ---------------------------------------------------------------------//
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$font-primary: 'Fira Sans Condensed', sans-serif;
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  &:hover {
+    width: 1rem;
+  }
+  &-track {
+    @apply bg-gray-500;
+  }
+  &-thumb {
+    @apply bg-gray-500/[0.05];
+    &:hover {
+      @apply bg-gray-500/[0.2];
+    }
+  }
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px = 62.5% 1rem
+}
