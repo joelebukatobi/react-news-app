@@ -1,0 +1,41 @@
+.news {
+  @apply h-full pt-[2.4rem];
+
+  & form {
+    @apply mb-[1.6rem];
+    & div[aria-label='input-group'] {
+      & label {
+        @apply sr-only;
+      }
+    }
+  }
+
+  & header {
+    @apply mb-[1.6rem];
+    & h6 {
+      @apply text-gray-900;
+    }
+    @apply flex justify-between items-center;
+    & div[aria-label='pagination'] {
+      @apply flex gap-x-[.8rem] justify-end items-center;
+      & button {
+        @apply rounded-[.4rem] bg-[unset] hover:bg-transparent border-transparent p-0 cursor-pointer;
+        //
+        & svg {
+          @apply h-[2rem] w-[2rem] stroke-gray-200 hover:stroke-blue-600 stroke-2;
+        }
+      }
+    }
+  }
+
+  & section {
+    //
+    & main {
+      @apply w-full;
+    }
+
+    & hr {
+      @apply my-[.8rem] border-none outline-none h-[.1rem] bg-gray-100;
+    }
+  }
+}

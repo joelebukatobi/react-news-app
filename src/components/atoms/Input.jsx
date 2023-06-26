@@ -1,3 +1,3 @@
 export const Input = ({ placeholder }) => {
-  return <input type="email" placeholder={placeholder} />;
+  return <input placeholder={placeholder} />;
 };

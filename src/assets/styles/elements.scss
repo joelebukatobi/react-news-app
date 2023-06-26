@@ -33,7 +33,7 @@ label {
 }
 // Input
 input {
-  @apply w-full rounded-[.4rem] border-[.1rem] border-gray-200 px-[1.6rem] h-[4rem] transition duration-300;
+  @apply w-full rounded-[.4rem] border-[.1rem] border-gray-100 px-[1.6rem] h-[4rem] transition duration-300;
   // Input Hover
   &:hover {
     @apply border-blue-500 border-[.24rem];
@@ -50,7 +50,7 @@ input {
 
 // Textarea
 textarea {
-  @apply w-full rounded-[.4rem] border-[.1rem] border-gray-200 p-[1.6rem] transition duration-300 h-[16rem];
+  @apply w-full rounded-[.4rem] border-[.1rem] border-gray-100 p-[1.6rem] transition duration-300 h-[16rem];
   // Input Hover
   &:hover {
     @apply border-blue-500 border-[.24rem];
@@ -67,7 +67,7 @@ textarea {
 
 //Select
 select {
-  @apply w-full rounded-[.4rem] border-gray-200 border-[.1rem] h-[4rem] px-[1.6rem] bg-white text-gray-400;
+  @apply w-full rounded-[.4rem] border-gray-100 border-[.1rem] h-[4rem] px-[1.6rem] bg-white text-gray-400;
   // Select Hover
   &:hover {
     @apply border-blue-500 border-[.24rem];
