@@ -14,7 +14,7 @@
 
       &:first-of-type,
       &[aria-label='register'] {
-        @apply flex items-center justify-center lg:justify-start gap-x-[.8rem] border-[.1rem] h-[3.2rem] px-[1.6rem] w-full lg:w-[unset] border-blue-500 rounded-[.4rem];
+        @apply flex items-center justify-center lg:justify-start gap-x-[.8rem] border-[.1rem] h-[4.8rem] lg:h-[3.2rem] px-[1.6rem] w-full lg:w-[unset] border-blue-500 rounded-[.4rem];
 
         & svg {
           @apply h-[1.8rem] w-[1.8rem] stroke-gray-700 stroke-[2];
@@ -30,7 +30,7 @@
     }
 
     & form[aria-label='dropdown'] {
-      @apply absolute z-[100] top-[3.2rem] right-0 w-full lg:w-[16rem] rounded-[.4rem] bg-white shadow-md items-start space-y-[.8rem] p-[.8rem];
+      @apply absolute z-[100] top-[4.8rem] lg:top-[3.2rem] right-0 w-full lg:w-[16rem] rounded-[.4rem] bg-white shadow-md items-start space-y-[.8rem] p-[.8rem];
 
       & a {
         @apply py-[.4rem] px-[.8rem] rounded-[.4rem] hover:bg-blue-100 cursor-pointer flex items-center justify-center lg:justify-start gap-x-[.8rem] font-medium text-[1.4rem] w-full border-none text-gray-700 h-[unset];
