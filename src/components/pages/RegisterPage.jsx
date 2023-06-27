@@ -114,9 +114,9 @@ export const RegisterPage = () => {
               <div aria-label="form-footer">
                 <p>
                   Have An Account?
-                  <a className="underline" href="">
+                  <Link to="/login" className="underline" href="">
                     Login
-                  </a>
+                  </Link>
                 </p>
 
                 <Button>Register</Button>

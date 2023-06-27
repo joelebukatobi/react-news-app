@@ -6,6 +6,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { Logo } from '@/components/molecules/Logo';
 import { Button } from '@/components/atoms/Button';
 import { logoutUser } from '@/services/api';
+import { getTokenFromCookie } from '@/helpers/cookieHelper';
 import { removeTokenCookie } from '@/helpers/cookieHelper';
 import { logoutUser as logout, setError, setLoading } from '@/features/userSlice';
 
@@ -24,8 +25,17 @@ export const Navbar = ({ user }) => {
     e.preventDefault(e);
     try {
       //
-      dispatch(setLoading(true));
-      const response = await logoutUser();
+      dispatch(setLoading(true)); // Get the token from the cookie
+      const token = getTokenFromCookie();
+      console.log(token);
+      if (!token) {
+        dispatch(logout());
+        dispatch(setLoading(false));
+        navigate('/');
+        return;
+      }
+      const response = await logoutUser(token);
+      console.log(response);
       //
       if (response.status === 'ok') {
         dispatch(logout());
@@ -43,9 +53,9 @@ export const Navbar = ({ user }) => {
   //
   return (
     <nav className="navbar relative">
-      <Link to="/">
+      <a href="/">
         <Logo />
-      </Link>
+      </a>
       <ul>
         <li onClick={toggle}>
           {user ? (

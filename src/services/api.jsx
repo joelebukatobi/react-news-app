@@ -13,24 +13,24 @@ const api = axios.create({
 // Function to get news feed
 export const getNews = async (page) => {
   const response = await api.get(`${API_URL}/news?page=${page}`);
-  return response;
+  return response.data;
 };
 
 // Function to get search news feed
 export const searchNews = async (page, query) => {
   const response = await api.get(`${API_URL}/news/search?q=${query}&page=${page}`);
-  return response;
+  return response.data;
 };
 
 // Function to get news by category
 export const getNewsByCategory = async (page, query) => {
   const response = await api.get(`${API_URL}/news/category?q=${query}&page=${page}`);
-  return response;
+  return response.data;
 };
 
 export const registerUser = async (userData) => {
   try {
-    const response = await api.post(`${API_URL}/register`, userData);
+    const response = await api.post(`${API_URL}/user/register`, userData);
     const token = response.data.token;
     setTokenCookie(token); // Set the token in a cookie
     return response.data;
@@ -41,7 +41,7 @@ export const registerUser = async (userData) => {
 
 export const loginUser = async (credentials) => {
   try {
-    const response = await api.post(`${API_URL}/login`, credentials);
+    const response = await api.post(`${API_URL}/user/login`, credentials);
     const token = response.data.token;
     setTokenCookie(token); // Set the token in a cookie
     return response.data;
@@ -68,14 +68,30 @@ export const fetchUser = async () => {
   }
 };
 
-export const logoutUser = async (token) => {
+export const updateUser = async (token, userData) => {
   try {
-    const response = await api.post(`${API_URL}/logout`, {
+    const response = await api.post(`${API_URL}/user/update`, userData, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
-    removeTokenCookie(); // Remove the token cookie
+    return response.data;
+  } catch (error) {
+    throw error.response.data;
+  }
+};
+
+export const logoutUser = async (token) => {
+  try {
+    const response = await api.post(`${API_URL}/user/logout`, null, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (response.status === 'ok') {
+      removeTokenCookie();
+    } // Remove the token cookie
     return response.data;
   } catch (error) {
     throw error.response.data;

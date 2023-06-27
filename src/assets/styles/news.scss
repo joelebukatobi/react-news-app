@@ -22,7 +22,7 @@
         @apply rounded-[.4rem] bg-[unset] hover:bg-transparent border-transparent p-0 cursor-pointer;
         //
         & svg {
-          @apply h-[2rem] w-[2rem] stroke-gray-200 hover:stroke-blue-600 stroke-2;
+          @apply h-[2rem] w-[2rem] stroke-blue-500 hover:stroke-blue-600 stroke-2;
         }
       }
     }

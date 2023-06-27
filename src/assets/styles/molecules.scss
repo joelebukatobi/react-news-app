@@ -6,7 +6,7 @@
   }
 
   & footer {
-    @apply flex gap-[1.6rem];
+    @apply flex flex-wrap gap-[1.6rem];
 
     & p {
       @apply flex items-center gap-x-[.8rem] font-medium text-gray-700;

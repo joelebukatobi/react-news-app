@@ -33,7 +33,7 @@ label {
 }
 // Input
 input {
-  @apply w-full rounded-[.4rem] border-[.1rem] border-gray-100 px-[1.6rem] h-[4rem] transition duration-300;
+  @apply w-full rounded-[.4rem] border-[.1rem] border-gray-300 px-[1.6rem] h-[4rem] transition duration-300 font-medium;
   // Input Hover
   &:hover {
     @apply border-blue-500 border-[.2rem];

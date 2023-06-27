@@ -70,9 +70,9 @@ export const LoginPage = () => {
               <div aria-label="form-footer">
                 <p>
                   No Account?
-                  <a className="underline" href="">
+                  <Link to="/register" className="underline" href="">
                     Sign Up
-                  </a>
+                  </Link>
                 </p>
 
                 <Button>Login</Button>
