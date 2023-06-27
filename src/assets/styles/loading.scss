@@ -1,0 +1,6 @@
+div[aria-label='loading'] {
+  @apply w-screen h-screen flex items-center justify-center bg-white;
+  & img {
+    @apply w-[12rem];
+  }
+}

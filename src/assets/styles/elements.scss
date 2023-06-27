@@ -1,21 +1,21 @@
 button,
 button[type='button'] {
-  @apply h-[4rem] flex items-center justify-center gap-[.96rem] rounded-[.4rem] border-[.1rem] border-blue-600 bg-blue-600 px-[1.6rem] py-[1.6rem] text-white transition duration-300;
+  @apply h-[4rem] flex items-center justify-center gap-[.96rem] rounded-[.4rem] border-[.1rem] border-blue-500 bg-blue-500 px-[1.6rem] py-[1.6rem] text-white font-medium transition duration-300;
   //
-  & span {
-    @apply text-[1.4rem] text-white;
+  // & span {
+  //   @apply text-[1.4rem] text-white;
 
-    &:hover {
-      @apply font-medium;
-    }
-  }
+  //   &:hover {
+  //     @apply font-medium;
+  //   }
+  // }
   //
   & svg {
     @apply h-[1.6rem] w-[1.6rem] stroke-white stroke-2;
   }
   // Button Hover
   &:hover {
-    @apply hover:bg-blue-700  border-blue-700 font-medium;
+    @apply hover:bg-blue-700  border-blue-700 font-bold;
   }
   // Button Focus
   &:focus {
@@ -36,11 +36,11 @@ input {
   @apply w-full rounded-[.4rem] border-[.1rem] border-gray-100 px-[1.6rem] h-[4rem] transition duration-300;
   // Input Hover
   &:hover {
-    @apply border-blue-500 border-[.24rem];
+    @apply border-blue-500 border-[.2rem];
   }
   // Input Focus
   &:focus {
-    @apply focus:outline-none border-[.24rem];
+    @apply focus:outline-none border-[.2rem];
   }
   // Input Active
   &:active {
@@ -100,7 +100,7 @@ table {
       & td {
         @apply whitespace-nowrap px-[.4rem] py-[.8rem]  text-gray-800;
         & svg {
-          @apply h-[2.4rem] w-[2.4rem] p-[.2rem] fill-gray-800 hover:fill-blue-600 hover:cursor-pointer;
+          @apply h-[2.4rem] w-[2.4rem] p-[.2rem] fill-gray-800 hover:fill-blue-500 hover:cursor-pointer;
         }
       }
     }
