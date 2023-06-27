@@ -79,7 +79,7 @@ export const NewsFeed = () => {
       {loading ? (
         <Loading />
       ) : (
-        <Layout>
+        <Layout user={user}>
           <div className="news">
             <form>
               <InputGroup

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navbar } from '@/components/organisms/Navbar';
-export const Layout = ({ children }) => {
+export const Layout = ({ children, user }) => {
   return (
     <div className="layout">
-      <Navbar user={'Joel Onwuanaku'} />
+      <Navbar user={user} />
       {children}
     </div>
   );
