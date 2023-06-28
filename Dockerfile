@@ -1,20 +1,17 @@
-# Use the official Node.js base image
-FROM node:alpine AS development
+# Use the official Node.js image with the desired Node.js version
+FROM node:alpine
 
-# Set the working directory in the container
-WORKDIR /src/app
+# Set the working directory
+WORKDIR /app/frontend
 
-# Copy the React project files into the container
+# Copy the project files
 COPY . .
 
 # Install dependencies
 RUN npm install
 
-# Build the production version of the app
-RUN npm run build
+# Expose the application port
+EXPOSE 3000
 
-# Expose the necessary ports
-EXPOSE 80
-
-# Set the entry point command
-CMD npm run dev
+# Start the application server
+CMD npm run start
