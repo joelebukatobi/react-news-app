@@ -3,32 +3,65 @@
 This project consists of a Laravel Backend and a React Frontend, both dockerized and ready to run together.
 
 ## **Prerequisites**
+
 Before running this project, make sure you have the following dependencies installed on your machine:
 
 - Docker
 - Docker Compose
 
 ### **Getting Started**
+
 To get started with the BuzzStack project, follow the steps below:
 
-
 Clone the Backend Repository:
+
 ```
 git clone https://github.com/joelebukatobi/backend-laravel-api
 ```
+
 Clone the Frontend Repository
+
 ```
 git clone https://github.com/joelebukatobi/react-news-app
 ```
-Place the cloned frontend repository in the same directory as the backend repository.
+
+Place the cloned frontend repository in the same directory as the backend repository for example **"_/app_"**.
+
+### **Creating the _docker-compose.yaml file_**
+
+Open a terminal and navigate to the root directory of the project **"_/app_"** and create the file **_docker.compose.yaml_** file and paste the following in using your favourite editor
+
+```
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    networks:
+      - buzzstack
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - buzzstack
+
+networks:
+  buzzstack:
 
 
+```
 
-### **Build and Run the Docker Containers**
-
-Open a terminal and navigate to the root directory of the project (in this case **_/app_**) and create the file **_docker.compose.yaml_** file
+### **Project Structure**
 
 Your project directory structure should be looking like this at this point.
+
 ```
 app/
 ├── backend/           # Laravel Backend
@@ -42,7 +75,9 @@ app/
 
 ```
 
-Run the following command to build and run the Docker containers:
+### **Build and Run the Docker Containers**
+
+Run the following command from the root directory **_/app_** to build and run the Docker containers:
 
 ```
 docker-compose up
