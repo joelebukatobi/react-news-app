@@ -1,6 +1,10 @@
-node_modules
-npm-debug.log
-build
-.git
-*.md
+# Ignore node_modules directory and its contents
+node_modules/
+
+# Ignore development files and directories
+.git 
 .gitignore
+
+# Ignore configuration files
+.prettierignore
+.prettierrc
