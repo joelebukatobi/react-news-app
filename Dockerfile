@@ -11,7 +11,7 @@ COPY . .
 RUN npm install
 
 # Expose the application port
-EXPOSE 3000
+EXPOSE 5173
 
 # Start the application server
-CMD npm run start
+CMD npm run dev
