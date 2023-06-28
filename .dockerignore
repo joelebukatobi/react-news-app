@@ -4,6 +4,7 @@
 # Ignore development files and directories
 .git 
 .gitignore
+.dockerignore
 
 # Ignore configuration files
 .prettierignore
