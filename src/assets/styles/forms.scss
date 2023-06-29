@@ -1,11 +1,11 @@
 div[aria-label='form'] {
-  @apply relative flex pt-[3.2rem] xl:items-center xl:h-screen  xl:pt-0;
+  @apply relative flex pt-[3.2rem] md:pt-[6.4rem] h-full lg:h-[100vh] xl:items-center  xl:justify-center lg:pt-0;
   //
   & main {
     @apply w-full flex flex-col items-center justify-center;
     //
     & header {
-      @apply flex flex-col p-[3.2rem] lg:p-0 items-center justify-center w-full lg:w-[50%] space-y-[1.6rem];
+      @apply flex flex-col p-[3.2rem] lg:p-0 items-center justify-center w-full lg:w-[30%] space-y-[1.6rem];
       //
       & h4 {
         @apply font-bold;
@@ -29,7 +29,7 @@ div[aria-label='form'] {
     //
 
     & form {
-      @apply px-[3.2rem] lg:px-0 mb-0 mt-[2.4rem] w-full lg:w-[50%] space-y-[2.4rem];
+      @apply px-[3.2rem] lg:px-0 mb-0 mt-[2.4rem] w-full lg:w-[40%] space-y-[2.4rem];
       //
 
       div[aria-label='input-group'] {
