@@ -12,7 +12,7 @@ import { loginUser } from '@/services/api';
 export const LoginPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { loading } = useSelector((state) => state.user);
+  const { loading, error } = useSelector((state) => state.user);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -32,6 +32,7 @@ export const LoginPage = () => {
     }
   };
 
+  console.log(error);
   return (
     <>
       {loading ? (
@@ -74,10 +75,11 @@ export const LoginPage = () => {
                     Sign Up
                   </Link>
                 </p>
-
                 <Button>Login</Button>
               </div>
             </form>
+
+            {error && <p>error</p>}
           </main>
         </div>
       )}
